@@ -1,2 +1,1 @@
-# daniellamooney.github.io
-Personal Website
+Personal website of Daniella Mooney.
