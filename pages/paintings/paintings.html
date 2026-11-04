@@ -22,6 +22,29 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="../../css/skeleton.css">
 
+  <!-- Gallery grid
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 32px 24px;
+      align-items: start;
+    }
+    .gallery figure {
+      margin: 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery figcaption {
+      font-size: 1.3rem;
+      margin-top: 8px;
+    }
+  </style>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -33,127 +56,86 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="three columns" style="margin-top: 5%" >
+      <div class="three columns" style="margin-top: 5%">
         <a href="/index.html"><h4>Daniella Mooney</h4></a>
         <ul>
-          <li> <a href="/pages/about/about.html">About</a> <br> 
-          <li> <a href="/pages/exhibitions/exhibitions.html">Exhibitions</a> <br> 
-          <li> <a href="/pages/selected_works/selected_works.html">Selected Works</a> <br> 
-          <li> <a href="/paintings.html">Paintings</a> <br> 
-          <li> <a href="/pages/texts/texts.html">Texts/Press</a> <br> 
-          <li> <a href="/pages/projects/projects.html">Projects</a> 
-          <li> <a href="/pages/contact/contact.html">Contact</a> <br>
+          <li><a href="/pages/about/about.html">About</a></li>
+          <li><a href="/pages/exhibitions/exhibitions.html">Exhibitions</a></li>
+          <li><a href="/pages/selected_works/selected_works.html">Selected Works</a></li>
+          <li><a href="/paintings.html">Paintings</a></li>
+          <li><a href="/pages/texts/texts.html">Texts/Press</a></li>
+          <li><a href="/pages/projects/projects.html">Projects</a></li>
+          <li><a href="/pages/contact/contact.html">Contact</a></li>
         </ul>
       </div>
-           <div class="nine columns" style="margin-top: 5%" >
 
-      	<p> Available painting inquiries, email: daniellamooney4@gmail.com </p>
+      <div class="nine columns" style="margin-top: 5%">
 
-        <p><br> <img style='height: 50%; width:50%; object-fit: contain' src="images/113.jpg"> </p><p><br> <i>Rerik Dolmen with lena in May</i> <br> Oil on board<br> 2025 </p>
+        <p>Available painting inquiries, email: daniellamooney4@gmail.com</p>
 
-        <p><br> <img style='height: 50%; width:50%; object-fit: contain' src="images/111.jpg"> </p><p><br> <i>Ancient Acropolis of Aigeira / Seliana</i> <br> Oil on board<br> 2024 </p>
+        <div class="gallery">
 
-        <p><br> <img style='height: 50%; width:50%; object-fit: contain' src="images/110.jpg"> </p><p><br> <i>Late afternoon, Mill waters the garden / Seliana</i> <br> Oil on board<br> 2024 </p>
+          <figure><img src="images/113.jpg" alt="Rerik Dolmen with lena in May"><figcaption><i>Rerik Dolmen with lena in May</i><br>Oil on board<br>2025</figcaption></figure>
+          <figure><img src="images/111.jpg" alt="Ancient Acropolis of Aigeira / Seliana"><figcaption><i>Ancient Acropolis of Aigeira / Seliana</i><br>Oil on board<br>2024</figcaption></figure>
+          <figure><img src="images/110.jpg" alt="Late afternoon, Mill waters the garden / Seliana"><figcaption><i>Late afternoon, Mill waters the garden / Seliana</i><br>Oil on board<br>2024</figcaption></figure>
+          <figure><img src="images/109.jpg" alt="With Olga’s mom in the backseat / Akrata"><figcaption><i>With Olga’s mom in the backseat / Akrata</i><br>Oil on board<br>2024</figcaption></figure>
+          <figure><img src="images/103.jpg" alt="Collecting water and prayers, long shadows / Deer Park"><figcaption><i>Collecting water and prayers, long shadows / Deer Park</i><br>Oil on board<br>2024</figcaption></figure>
+          <figure><img src="images/97.jpg" alt="PDC late light / Greece"><figcaption><i>PDC late light / Greece</i><br>Oil on board<br>2024</figcaption></figure>
+          <figure><img src="images/95.JPG" alt="On the way to Kabak / Turkey"><figcaption><i>On the way to Kabak / Turkey</i><br>Oil on board<br>2023</figcaption></figure>
+          <figure><img src="images/94.jpg" alt="Almost took Slangoile / Table Mountain"><figcaption><i>Almost took Slangoile / Table Mountain</i><br>Oil on board<br>2023</figcaption></figure>
+          <figure><img src="images/91.jpg" alt="Limestone on the Lycian way / Turkey"><figcaption><i>Limestone on the Lycian way / Turkey</i><br>Oil on board<br>2023</figcaption></figure>
+          <figure><img src="images/89.jpg" alt="Probably James the Less / Western Cape / South Africa"><figcaption><i>Probably James the Less / Western Cape / South Africa</i><br>Oil on board<br>2023</figcaption></figure>
+          <figure><img src="images/88.jpg" alt="Moments of questionable consent / On the way to the Cederberg"><figcaption><i>Moments of questionable consent / On the way to the Cederberg</i><br>Oil on board<br>2022</figcaption></figure>
+          <figure><img src="images/87.jpg" alt="Trying to find signal / kouebokkeveld"><figcaption><i>Trying to find signal / kouebokkeveld</i><br>Oil on board<br>2022</figcaption></figure>
+          <figure><img src="images/85.jpg" alt="Looking for small details / Worcester again"><figcaption><i>Looking for small details / Worcester again</i><br>Oil on board<br>2022</figcaption></figure>
+          <figure><img src="images/84.jpg" alt="New years, a year later / wydekloof / Western Cape"><figcaption><i>New years, a year later / wydekloof / Western Cape</i><br>Oil on board<br>2022</figcaption></figure>
+          <figure><img src="images/82.jpg" alt="Imagining Dutoitskloof without the highway / Sebastian"><figcaption><i>Imagining Dutoitskloof without the highway / Sebastian</i><br>Oil on board<br>2022</figcaption></figure>
+          <figure><img src="images/81.jpg" alt="Not Hellfire, but thinking about it / Dutoitskloof"><figcaption><i>Not Hellfire, but thinking about it / Dutoitskloof</i><br>Oil on board<br>2022</figcaption></figure>
+          <figure><img src="images/79.jpg" alt="Faulted, bowed, crumpled / Worcester / Western Cape"><figcaption><i>Faulted, bowed, crumpled / Worcester / Western Cape</i><br>Oil on board<br>2022</figcaption></figure>
+          <figure><img src="images/77.jpg" alt="Remnants of the Alpine front / The Dolomites"><figcaption><i>Remnants of the Alpine front / The Dolomites</i><br>Oil on board<br>2021</figcaption></figure>
+          <figure><img src="images/76.jpg" alt="Reading Nan / The living Mountain / Namibia"><figcaption><i>Reading Nan / The living Mountain / Namibia</i><br>Oil on board<br>2021</figcaption></figure>
+          <figure><img src="images/74.jpg" alt="Wet leaves, somewhere in the Dolomites"><figcaption><i>Wet leaves, somewhere in the Dolomites</i><br>Oil on board<br>2021</figcaption></figure>
+          <figure><img src="images/72.jpg" alt="Boiled egg pitstop / Geotrail Mpumalanga"><figcaption><i>Boiled egg pitstop / Geotrail Mpumalanga</i><br>Oil on board<br>2021</figcaption></figure>
+          <figure><img src="images/71.jpg" alt="One man in a three man / borrowing tents, the Alps"><figcaption><i>One man in a three man / borrowing tents, the Alps</i><br>Oil on board<br>2021</figcaption></figure>
+          <figure><img src="images/69.jpg" alt="Erasing memories / Siurana / Spain"><figcaption><i>Erasing memories / Siurana / Spain</i><br>Oil on board<br>2021</figcaption></figure>
+          <figure><img src="images/70.jpg" alt="The Makhonjwa's / Mpumalanga"><figcaption><i>The Makhonjwa's / Mpumalanga</i><br>Oil on board<br>2021</figcaption></figure>
+          <figure><img src="images/66.jpg" alt="Memory's magma / Die Brandberg, Namibia"><figcaption><i>Memory's magma / Die Brandberg, Namibia</i><br>Oil on board<br>2021</figcaption></figure>
+          <figure><img src="images/56.jpg" alt="Milner Peak from Milner Ridge Peak / South Africa"><figcaption><i>Milner Peak from Milner Ridge Peak / South Africa</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/55.jpg" alt="Bainskloof, or, the isle of Gont"><figcaption><i>Bainskloof, or, the isle of Gont</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/50.jpg" alt="Nearing Bolzano / Italy"><figcaption><i>Nearing Bolzano / Italy</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/48.jpg" alt="Cartographic paradoxes / somewhere between Nauders and Naturno"><figcaption><i>Cartographic paradoxes / somewhere between Nauders and Naturno</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/47.jpg" alt="The Erongo's / Namibia"><figcaption><i>The Erongo's / Namibia</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/46.jpg" alt="Spitzkoppe, again / Namibia"><figcaption><i>Spitzkoppe, again / Namibia</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/45.jpg" alt="He said the mountains send their love from Franschoek / Western Cape"><figcaption><i>He said the mountains send their love from Franschoek / Western Cape</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/44.jpg" alt="Wolfberg Cracks / Cederberg"><figcaption><i>Wolfberg Cracks / Cederberg</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/43.jpg" alt="Jonkershoek / Somewhere near Stellenbosch"><figcaption><i>Jonkershoek / Somewhere near Stellenbosch</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/42.jpg" alt="Fading scenes / Drakensberg"><figcaption><i>Fading scenes / Drakensberg</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/41.jpg" alt="Buffels Dome, in another world / Western Cape"><figcaption><i>Buffels Dome, in another world / Western Cape</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/40.jpg" alt="They said Milner was phenomenal / Hex River mountains"><figcaption><i>They said Milner was phenomenal / Hex River mountains</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/39.jpg" alt="Silverstream Ravine / Ledges / Table mountain"><figcaption><i>Silverstream Ravine / Ledges / Table mountain</i><br>Oil on board<br>2020</figcaption></figure>
+          <figure><img src="images/37.jpg" alt="Mineral treasures stashed in the footwell / Namibia"><figcaption><i>Mineral treasures stashed in the footwell / Namibia</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/36.jpg" alt="Whispering in caves / Table Mountain"><figcaption><i>Whispering in caves / Table Mountain</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/33.jpg" alt="While our vegetables wilted in the chilly chest / Namibia"><figcaption><i>While our vegetables wilted in the chilly chest / Namibia</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/31.jpg" alt="Dropping belay devices, Spitzkoppe"><figcaption><i>Dropping belay devices, Spitzkoppe</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/29.jpg" alt="She called them The Mountains of Time"><figcaption><i>She called them The Mountains of Time</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/28.jpg" alt="Wild camping with Anna / somewhere before the border"><figcaption><i>Wild camping with Anna / somewhere before the border</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/21.jpg" alt="John sound recording in Wydekloof"><figcaption><i>John sound recording in Wydekloof</i><br>Oil on board<br>2018</figcaption></figure>
+          <figure><img src="images/10.jpg" alt="Brandberg / Namibia"><figcaption><i>Brandberg / Namibia</i><br>Oil on board<br>2018</figcaption></figure>
+          <figure><img src="images/5.jpg" alt="Kasteel's Buttress / Table Mountain"><figcaption><i>Kasteel's Buttress / Table Mountain</i><br>Oil on board<br>2017</figcaption></figure>
+          <figure><img src="images/6.jpg" alt="Thinking about knees / genuflection ridge"><figcaption><i>Thinking about knees / genuflection ridge</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/7.jpg" alt="Emerging from Elandspad / Dutoitskloof"><figcaption><i>Emerging from Elandspad / Dutoitskloof</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/9.jpg" alt="Du Toits Kloof"><figcaption><i>Du Toits Kloof</i><br>Oil on board<br>2018</figcaption></figure>
+          <figure><img src="images/12.jpg" alt="Namibia"><figcaption><i>Namibia</i><br>Oil on board<br>2018</figcaption></figure>
+          <figure><img src="images/13.jpg" alt="Snow mission/ Dutoitskloof"><figcaption><i>Snow mission/ Dutoitskloof</i><br>Oil on board<br>2018</figcaption></figure>
+          <figure><img src="images/14.jpg" alt="Diving rock / Cosy bay"><figcaption><i>Diving rock / Cosy bay</i><br>Oil on canvas<br>2018</figcaption></figure>
+          <figure><img src="images/17.jpg" alt="Early morning confetti bush / Table Mountain"><figcaption><i>Early morning confetti bush / Table Mountain</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/18.jpg" alt="Winding our way to the turrets / Wydekloof"><figcaption><i>Winding our way to the turrets / Wydekloof</i><br>Oil on board<br>2018</figcaption></figure>
+          <figure><img src="images/19.jpg" alt="Exposure nostalgia / Dutoitskloof"><figcaption><i>Exposure nostalgia / Dutoitskloof</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/24.jpg" alt="Sebastian in Tulbagh"><figcaption><i>Sebastian in Tulbagh</i><br>Gouache on board<br>2015</figcaption></figure>
+          <figure><img src="images/2.jpg" alt="I'd rather be in Springstygbeugel, thanks."><figcaption><i>I'd rather be in Springstygbeugel, thanks.</i><br>Oil on board<br>2019</figcaption></figure>
+          <figure><img src="images/3.jpg" alt="Thinking about knees II / Jonkershoek"><figcaption><i>Thinking about knees II / Jonkershoek</i><br>Oil on board<br>2019</figcaption></figure>
 
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/109.jpg"> </p><p><br> <i>With Olga’s mom in the backseat / Akrata</i> <br> Oil on board<br> 2024 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/103.jpg"> </p><p><br> <i>Collecting water and prayers, long shadows / Deer Park </i> <br> Oil on board<br> 2024 </p>
-
-       <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/97.jpg"> </p><p><br> <i> PDC late light / Greece</i> <br> Oil on board<br> 2024 </p>
-       
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/95.JPG"> </p><p><br> <i> On the way to Kabak / Turkey</i> <br> Oil on board<br> 2023 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/94.jpg"> </p><p><br> <i> Almost took Slangoile / Table Mountain</i>  <br> Oil on board<br> 2023 </p>
-
-       <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/91.jpg"> </p><p><br> <i> Limestone on the Lycian way / Turkey </i>  <br> Oil on board<br> 2023 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/89.jpg"> </p><p><br> <i> Probably James the Less / Western Cape / South Africa </i>  <br> Oil on board<br> 2023 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/88.jpg"> </p><p><br> <i> Moments of questionable consent / On the way to the Cederberg </i>  <br> Oil on board<br> 2022 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/87.jpg"> </p><p><br> <i> Trying to find signal / kouebokkeveld </i>  <br> Oil on board<br> 2022 </p>
-
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/85.jpg"> </p><p><br> <i> Looking for small details / Worcester again </i>  <br> Oil on board<br> 2022 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/84.jpg"> </p><p><br> <i> New years, a year later / wydekloof / Western Cape </i>  <br> Oil on board<br> 2022 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/82.jpg"> </p><p><br> <i> Imaginging Dutoitskloof without the highway / Sebastian </i>  <br> Oil on board<br> 2022 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/81.jpg"> </p><p><br> <i> Not Hellfire, but thinking about it / Dutoitskloof </i>  <br> Oil on board<br> 2022 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/79.jpg"> </p><p><br> <i> Faulted, bowed, crumpled / Worcester / Western Cape </i>  <br> Oil on board<br> 2022 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/77.jpg"> </p><p><br> <i> Remnants of the Alpine front / The Dolomites </i>  <br> Oil on board<br> 2021 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/76.jpg"> </p><p><br> <i> Reading Nan / The living Mountain / Namibia </i>  <br> Oil on board<br> 2021 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/74.jpg"> </p><p><br> <i> Wet leaves, somewhere in the Dolomites </i>  <br> Oil on board<br> 2021 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/72.jpg"> </p><p><br> <i> Boiled egg pitstop / Geotrail Mpumalanga </i>  <br> Oil on board<br> 2021 </p>
-
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/71.jpg"> </p><p><br> <i> One man in a three man / borrowing tents, the Alps </i>  <br> Oil on board<br> 2021 </p>
-
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/69.jpg"> </p><p><br> <i> Erasing memories / Siurana / Spain </i>  <br> Oil on board<br> 2021 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/70.jpg"> </p><p><br> <i> The Makhonjwa's / Mpumalanga </i>  <br> Oil on board<br> 2021 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/66.jpg"> </p><p><br> <i> Memory's magma / Die Brandberg, Namibia </i>  <br> Oil on board<br> 2021 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/56.jpg"> </p><p><br> <i> Milner Peak from Milner Ridge Peak / South Africa </i>  <br> Oil on board<br> 2020 </p>
-
-      	<p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/55.jpg"> </p><p><br> <i> Bainskloof, or, the isle of Gont </i>  <br> Oil on board<br> 2020 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/50.jpg"> </p><p><br> <i> Nearing Bolzano / Italy </i>  <br> Oil on board<br> 2020 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/48.jpg"> </p><p><br> <i> Cartographic paradoxes / somewhere between Nauders and Naturno </i>  <br > Oil on board<br> 2020 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/47.jpg"> </p><p><br> <i> The Erongo's / Namibia</i>  <br> Oil on board<br> 2020 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/46.jpg"> </p><p><br> <i> Spitzkoppe, again / Namibia </i>  <br> Oil on board<br> 2020 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/45.jpg"> </p><p><br> <i> He said the mountains send their love from Franschoek / Western Cape </i>  <br> Oil on board<br> 2020 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/44.jpg"> </p><p><br> <i> Wolfberg Cracks / Cederberg </i>  <br> Oil on board<br> 2020 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/43.jpg"> </p><p><br> <i> Jonkershoek / Somewhere near Stellenbosch </i>  <br> Oil on board<br> 2020 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/42.jpg"> </p><p><br> <i>Fading scenes / Drakensberg </i>  <br> Oil on board<br> 2020 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/41.jpg"> </p><p><br> <i>Buffels Dome, in another world / Western Cape </i>  <br> Oil on board<br> 2020 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/40.jpg"> </p><p><br> <i>They said Milner was phenomenal / Hex River mountains </i>  <br> Oil on board<br> 2020 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/39.jpg"> </p><p><br> <i> Silverstream Ravine / Ledges / Table mountain </i>  <br> Oil on board<br> 2020 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/37.jpg"> </p><p><br> <i> Mineral treasures stashed in the footwell / Namibia </i>  <br> Oil on board<br> 2019 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/36.jpg"> </p><p><br> <i> Whispering in caves / Table Mountain </i>  <br> Oil on board<br> 2019 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/33.jpg"> </p><p><br> <i> While our vegetables wilted in the chilly chest / Namibia </i>  <br> Oil on board<br> 2019 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/31.jpg"> </p><p><br> <i> Dropping belay devices, Spitzkoppe </i>  <br> Oil on board<br> 2019 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/29.jpg"> </p><p><br> <i> She called them The Mountains of Time </i>  <br> Oil on board<br> 2019 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/28.jpg"> </p><p><br> <i> Wild camping with Anna / somewhere before the border </i>  <br> Oil on board<br> 2019 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/21.jpg"> </p><p><br> <i> John sound recording in Wydekloof </i>  <br> Oil on board<br> 2018 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/10.jpg"> </p><p><br> <i> Brandberg / Namibia </i>  <br> Oil on board<br> 2018 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/5.jpg"></p><p> <br> <i> Kasteel's Buttress / Table Mountain</i>  <br> Oil on board<br> 2017 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/6.jpg"> </p><p><br> <i> Thinking about knees / genuflection ridge </i>  <br> Oil on board<br> 2019 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/7.jpg"></p><p> <br> <i> Emerging from Elandspad / Dutoitskloof </i>  <br> Oil on board<br> 2019 </p>
-        
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/9.jpg"> </p><p><br> <i> Du Toits Kloof</i>  <br> Oil on board<br> 2018 </p>
-        
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/12.jpg"> </p><p><br> <i> Namibia</i>  <br> Oil on board<br> 2018 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/13.jpg"> </p><p><br> <i> Snow mission/ Dutoitskloof </i>  <br> Oil on board<br> 2018 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/14.jpg"></p><p> <br> <i> Diving rock / Cosy bay </i>  <br> Oil on canvas<br> 2018 </p>
-
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/17.jpg"> </p><p><br> <i> Early morning confetti bush / Table Mountain </i>  <br> Oil on board<br> 2019 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/18.jpg"> </p><p><br> <i> Winding our way to the turrets / Wydekloof </i>  <br> Oil on board<br> 2018 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/19.jpg"> </p><p><br> <i> Exposure nostalgia / Dutoitskloof</i>  <br> Oil on board<br> 2019 </p>
-        acrylic on board<br> 2011 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/24.jpg"> </p><p><br> <i> Sebastian in Tulbagh</i>  <br> Gouache on board<br> 2015 </p>
-       
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/2.jpg"></p><p> <br> <i> I'd rather be in Springstygbeugel, thanks.</i>  <br> Oil on board<br> 2019 </p>
-        <p><br> <img style='height: 50%; width: 50%; object-fit: contain' src="images/3.jpg"></p><p> <br> <i> Thinking about knees II / Jonkershoek </i>  <br> Oil on board<br> 2019 </p>
+        </div>
       </div>
     </div>
   </div>
