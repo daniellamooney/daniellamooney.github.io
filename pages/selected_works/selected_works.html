@@ -19,8 +19,40 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="../.../css/normalize.css">
+  <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="../../css/skeleton.css">
+
+  <!-- Gallery grid (two columns)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 24px;
+      align-items: start;
+    }
+    .gallery figure {
+      margin: 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery img + img {
+      margin-top: 8px;
+    }
+    .gallery figcaption {
+      font-size: 1.3rem;
+      margin-top: 8px;
+    }
+    /* On very small phones, switch to one column */
+    @media (max-width: 450px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -33,52 +65,135 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="three columns" style="margin-top: 5%" >
+      <div class="three columns" style="margin-top: 5%">
         <a href="../../index.html"><h4>Daniella Mooney</h4></a>
         <ul>
-          <li> <a href="../../pages/about/about.html">About</a> <br> 
-          <li> <a href="../../pages/exhibitions/exhibitions.html">Exhibitions</a> <br> 
-          <li> <a href="../../selected_works.html">Selected Works</a> <br> 
-          <li> <a href="../../pages/paintings/paintings.html">Paintings</a> <br> 
-          <li> <a href="../../pages/texts/texts.html">Texts/Press</a> <br> 
-          <li> <a href="../../pages/projects/projects.html">Projects</a> 
-          <li> <a href="../../pages/contact/contact.html">Contact</a> <br>
+          <li><a href="../../pages/about/about.html">About</a></li>
+          <li><a href="../../pages/exhibitions/exhibitions.html">Exhibitions</a></li>
+          <li><a href="../../pages/selected_works/selected_works.html">Selected Works</a></li>
+          <li><a href="../../paintings.html">Paintings</a></li>
+          <li><a href="../../pages/texts/texts.html">Texts/Press</a></li>
+          <li><a href="../../pages/projects/projects.html">Projects</a></li>
+          <li><a href="../../pages/contact/contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="nine columns" style="margin-top: 5%" >   
-        <p><b> selected works</b></p>
-        <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/101.jpg"> <br> <i> Conversations in Stone</i>  <br > Rustenberg Granite, Piketberg Sandstone<br> 88 x 60 x 220cm <br> 2018 </p>
-        
-        <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/30.jpg"> <br> <i> The Mirror of Ink</i>  <br > Black Ink patina, hand carved Meranti wood, Perspex<br> 120 x 120x 190cm <br> 2011 </p>
-        <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/31.jpg"> <br> <i> The Mirror of Ink(detail)</i>  <br >Black Ink, hand carved Meranti wood, Perspex<br> 120 x 120x 190cm <br> 2011 </p>
-        
-        <p> <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/2.jpg"> 
-            <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/02.jpg"> <br> <i>Find a Space/Create a Centre</i>  <br> Granite, Retired Climbing Rope <br> 27 x 44 x 35cm <br> 2018 </p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/3.jpg"> 
-            <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/4.jpg">  <br> <i> Find the Place/Create a Centre</i> <br> Granite, Retired Climbing Rope <br> 38 x 35 x 22cm <br> 2018 </p>
-        <p> <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/5.jpg"> 
-            <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/6.jpg"> <br> <i>Fool's Gold Maquette</i> <br> Polished Sandstone, Bronze <br> 25 x 25 x 45cm <br> 2013 </p>
-        <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/7.jpg"> <br> <i> Homage to the Irrelevant and Indifferent </i> <br> Soapstone, Yellowwood <br> 50 x 24 x 20cm <br> 2018 </p>
-        <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/9.jpg"> <br> <i> A Stone's Breath</i> <br> Wood, Found Stone <br> 15 x 15 x 10cm <br> 2017 </p>
-        <p> <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/10.jpg"> <br> <i> Untitled </i> <br> Mixed Media <br> 120 x 120 x 150cm <br> 2013 </p>
-        <p> <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/14.jpg"> 
-            <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/15.jpg"> <br> <i> Self Portrait as a Vessel </i> <br> Mahogany Sapele, African Black Wood, Pecan, Green Marble <br> 62 x 38 x 38cm <br> 2015 </p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/16.jpg"> 
-            <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/17.jpg">  <br> <i> Self Portrait as a Stone Vessel </i> <br> Marble, Jasper, Soap Stone <br> 45 x 45 x 60cm <br> 2015 </p>
-        <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/18.jpg"> <br> <i> Three New Wands</i> <br> Mixed Wood <br> Dimensions Variable <br> 2017 </p>
-        <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/19.jpg"> <br> <i> Parquetry</i> <br> Mixed Wood, Antique Chair <br> 250 x 200 x 100cm <br> 2012 </p>
-        <p> <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/20.jpg"> 
-            <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/21.jpg"> <br> <i>My Winter Your Summer</i> <br> Jelutong, American Poplar, Walnut, Slate <br> 40 x 15 x 35cm <br> 2011 </p>
-        <p> <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/22.jpg"> 
-            <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/23.jpg"> <br> <i>Purple Hearts</i> <br> Purple Heart, Found Rock <br> 13 x 12 x 12cm <br> 2011 </p>
-        <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/26.jpg">    
-            <br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/27.jpg"> <br> <i> The Gateway to the Invisible must be Visible (a work in collaboration with Yogi de Beer)</i>  <br > Granite, porcelain<br> 193 x 262 x 50cm <br> 2013 </p>
-        <p> <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/24.jpg"> 
-            <br><img style='height: 100%; width: 100%; object-fit: contain' src="images/25.jpg"> <br> <i>Oak Vase</i> <br> Oak <br> 20 x 20 x 38cm <br> 2016 </p>
-            <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/28.jpg"> <br> 
-              <img style='height: 100%; width: 100%; object-fit: contain' src="images/29.jpg"> <br> <i> Untitled</i>  <br > Bronze, Black Mirror, Kiaat<br> 120 x 120 x 150 cm <br> 2013  </p>
-        <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/01.jpg"> <br> <i> Holy Water - A Study in Rain Making</i>  <br > Meranti, Cherry, Soapstone, Holy Water<br> 82 x 104 x 18cm <br> 2014 </p>
-        <p><br> <img style='height: 100%; width: 100%; object-fit: contain' src="images/001.jpg"> <br> <i> Sol Niger (The Black Sun) </i> <br> Mixed Wood, Perspex <br> 60 x 60 x 30cm  <br> 2012 </p>
+
+      <div class="nine columns" style="margin-top: 5%">
+        <p><b>selected works</b></p>
+
+        <div class="gallery">
+
+          <figure>
+            <img src="images/101.jpg" alt="Conversations in Stone">
+            <figcaption><i>Conversations in Stone</i><br>Rustenberg Granite, Piketberg Sandstone<br>88 x 60 x 220cm<br>2018</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/30.jpg" alt="The Mirror of Ink">
+            <figcaption><i>The Mirror of Ink</i><br>Black Ink patina, hand carved Meranti wood, Perspex<br>120 x 120 x 190cm<br>2011</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/31.jpg" alt="The Mirror of Ink (detail)">
+            <figcaption><i>The Mirror of Ink (detail)</i><br>Black Ink, hand carved Meranti wood, Perspex<br>120 x 120 x 190cm<br>2011</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/2.jpg" alt="Find a Space/Create a Centre">
+            <img src="images/02.jpg" alt="Find a Space/Create a Centre">
+            <figcaption><i>Find a Space/Create a Centre</i><br>Granite, Retired Climbing Rope<br>27 x 44 x 35cm<br>2018</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/3.jpg" alt="Find the Place/Create a Centre">
+            <img src="images/4.jpg" alt="Find the Place/Create a Centre">
+            <figcaption><i>Find the Place/Create a Centre</i><br>Granite, Retired Climbing Rope<br>38 x 35 x 22cm<br>2018</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/5.jpg" alt="Fool's Gold Maquette">
+            <img src="images/6.jpg" alt="Fool's Gold Maquette">
+            <figcaption><i>Fool's Gold Maquette</i><br>Polished Sandstone, Bronze<br>25 x 25 x 45cm<br>2013</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/7.jpg" alt="Homage to the Irrelevant and Indifferent">
+            <figcaption><i>Homage to the Irrelevant and Indifferent</i><br>Soapstone, Yellowwood<br>50 x 24 x 20cm<br>2018</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/9.jpg" alt="A Stone's Breath">
+            <figcaption><i>A Stone's Breath</i><br>Wood, Found Stone<br>15 x 15 x 10cm<br>2017</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/10.jpg" alt="Untitled, 2013">
+            <figcaption><i>Untitled</i><br>Mixed Media<br>120 x 120 x 150cm<br>2013</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/14.jpg" alt="Self Portrait as a Vessel">
+            <img src="images/15.jpg" alt="Self Portrait as a Vessel">
+            <figcaption><i>Self Portrait as a Vessel</i><br>Mahogany Sapele, African Black Wood, Pecan, Green Marble<br>62 x 38 x 38cm<br>2015</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/16.jpg" alt="Self Portrait as a Stone Vessel">
+            <img src="images/17.jpg" alt="Self Portrait as a Stone Vessel">
+            <figcaption><i>Self Portrait as a Stone Vessel</i><br>Marble, Jasper, Soap Stone<br>45 x 45 x 60cm<br>2015</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/18.jpg" alt="Three New Wands">
+            <figcaption><i>Three New Wands</i><br>Mixed Wood<br>Dimensions Variable<br>2017</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/19.jpg" alt="Parquetry">
+            <figcaption><i>Parquetry</i><br>Mixed Wood, Antique Chair<br>250 x 200 x 100cm<br>2012</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/20.jpg" alt="My Winter Your Summer">
+            <img src="images/21.jpg" alt="My Winter Your Summer">
+            <figcaption><i>My Winter Your Summer</i><br>Jelutong, American Poplar, Walnut, Slate<br>40 x 15 x 35cm<br>2011</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/22.jpg" alt="Purple Hearts">
+            <img src="images/23.jpg" alt="Purple Hearts">
+            <figcaption><i>Purple Hearts</i><br>Purple Heart, Found Rock<br>13 x 12 x 12cm<br>2011</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/26.jpg" alt="The Gateway to the Invisible must be Visible">
+            <img src="images/27.jpg" alt="The Gateway to the Invisible must be Visible">
+            <figcaption><i>The Gateway to the Invisible must be Visible (a work in collaboration with Yogi de Beer)</i><br>Granite, porcelain<br>193 x 262 x 50cm<br>2013</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/24.jpg" alt="Oak Vase">
+            <img src="images/25.jpg" alt="Oak Vase">
+            <figcaption><i>Oak Vase</i><br>Oak<br>20 x 20 x 38cm<br>2016</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/28.jpg" alt="Untitled, bronze and black mirror, 2013">
+            <img src="images/29.jpg" alt="Untitled, bronze and black mirror, 2013">
+            <figcaption><i>Untitled</i><br>Bronze, Black Mirror, Kiaat<br>120 x 120 x 150cm<br>2013</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/01.jpg" alt="Holy Water - A Study in Rain Making">
+            <figcaption><i>Holy Water - A Study in Rain Making</i><br>Meranti, Cherry, Soapstone, Holy Water<br>82 x 104 x 18cm<br>2014</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/001.jpg" alt="Sol Niger (The Black Sun)">
+            <figcaption><i>Sol Niger (The Black Sun)</i><br>Mixed Wood, Perspex<br>60 x 60 x 30cm<br>2012</figcaption>
+          </figure>
+
+        </div>
       </div>
     </div>
   </div>
