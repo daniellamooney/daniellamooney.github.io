@@ -27,8 +27,8 @@
   <style>
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 40px 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 16px;
       align-items: start;
     }
     .gallery figure {
@@ -36,7 +36,8 @@
     }
     .gallery img {
       width: 100%;
-      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       display: block;
     }
     .gallery a:hover img {
@@ -44,7 +45,14 @@
     }
     .gallery figcaption {
       font-size: 1.3rem;
+      font-style: italic;
       margin-top: 8px;
+    }
+    /* On small phones, stack the images one per row */
+    @media (max-width: 550px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 
@@ -81,17 +89,17 @@
 
           <figure>
             <a href="close_the_hole/close_the_hole.html"><img src="images/3.jpeg" alt="Close the hole"></a>
-            <figcaption><a href="close_the_hole/close_the_hole.html">Close the hole</a></figcaption>
+            <figcaption><a href="close_the_hole/close_the_hole.html">Close the hole, 2026</a></figcaption>
           </figure>
 
           <figure>
             <a href="golden_age_rising/golden_age_rising.html"><img src="images/1.jpg" alt="Golden Age Rising"></a>
-            <figcaption><a href="golden_age_rising/golden_age_rising.html">Golden Age Rising</a></figcaption>
+            <figcaption><a href="golden_age_rising/golden_age_rising.html">Golden age rising, 2014</a></figcaption>
           </figure>
 
           <figure>
             <a href="maybe_your_magic/maybe_your_magic.html"><img src="images/2.jpg" alt="Maybe Your Magic Is Working"></a>
-            <figcaption><a href="maybe_your_magic/maybe_your_magic.html">Maybe Your Magic Is Working</a></figcaption>
+            <figcaption><a href="maybe_your_magic/maybe_your_magic.html">Maybe your magic is working, 2011</a></figcaption>
           </figure>
 
         </div>
