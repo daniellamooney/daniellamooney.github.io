@@ -36,8 +36,8 @@
     }
     .gallery img {
       width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
       display: block;
     }
     .gallery a:hover img {
@@ -47,6 +47,9 @@
       font-size: 1.3rem;
       font-style: italic;
       margin-top: 8px;
+    }
+    .gallery figcaption a {
+      color: blue;
     }
     /* On small phones, stack the images one per row */
     @media (max-width: 550px) {
@@ -94,12 +97,12 @@
 
           <figure>
             <a href="golden_age_rising/golden_age_rising.html"><img src="images/1.jpg" alt="Golden Age Rising"></a>
-            <figcaption><a href="golden_age_rising/golden_age_rising.html">Golden age rising, 2014</a></figcaption>
+            <figcaption><a href="golden_age_rising/golden_age_rising.html">Golden Age Rising, 2014</a></figcaption>
           </figure>
 
           <figure>
             <a href="maybe_your_magic/maybe_your_magic.html"><img src="images/2.jpg" alt="Maybe Your Magic Is Working"></a>
-            <figcaption><a href="maybe_your_magic/maybe_your_magic.html">Maybe your magic is working, 2011</a></figcaption>
+            <figcaption><a href="maybe_your_magic/maybe_your_magic.html">Maybe Your Magic Is Working, 2011</a></figcaption>
           </figure>
 
         </div>
