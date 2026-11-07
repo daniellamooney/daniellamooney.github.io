@@ -22,6 +22,34 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/skeleton.css">
 
+  <!-- Two columns that fit images of any proportion
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+    .gallery {
+      column-count: 2;
+      column-gap: 24px;
+    }
+    .gallery figure {
+      margin: 0 0 32px 0;
+      break-inside: avoid;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery figcaption {
+      font-size: 1.3rem;
+      margin-top: 8px;
+    }
+    /* On very small phones, switch to one column */
+    @media (max-width: 450px) {
+      .gallery {
+        column-count: 1;
+      }
+    }
+  </style>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -33,31 +61,129 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="three columns" style="margin-top: 5%" >
+      <div class="three columns" style="margin-top: 5%">
         <a href="/index.html"><h4>Daniella Mooney</h4></a>
         <ul>
-          <li> <a href="/pages/about/about.html">About</a> <br> 
-          <li> <a href="/pages/exhibitions/exhibitions.html">Exhibitions</a> <br> 
-          <li> <a href="/pages/selected_works/selected_works.html">Selected Works</a> <br> 
-          <li> <a href="/pages/paintings/paintings.html">Paintings</a> <br> 
-          <li> <a href="/pages/texts/texts.html">Texts/Press</a> <br> 
-          <li> <a href="/pages/projects/projects.html">Projects</a> 
-          <li> <a href="/pages/contact/contact.html">Contact</a> <br>
+          <li><a href="/pages/about/about.html">About</a></li>
+          <li><a href="/pages/exhibitions/exhibitions.html">Exhibitions</a></li>
+          <li><a href="/pages/selected_works/selected_works.html">Selected Works</a></li>
+          <li><a href="/pages/paintings/paintings.html">Paintings</a></li>
+          <li><a href="/pages/texts/texts.html">Texts/Press</a></li>
+          <li><a href="/pages/projects/projects.html">Projects</a></li>
+          <li><a href="/pages/contact/contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="nine columns" style="margin-top: 5%" >
+
+      <div class="nine columns" style="margin-top: 5%">
 
         <p><b>Cabin / Potsdam NY / Fall 2026</b></p>
 
-      <br><p>This series of paintings was produced during a two month residency stay at Cabin over the Autumn of 2026. The paintings locate themselves within a fictionalised narrative developed over the first few weeks of 
-      living in Potsdam upstate New York. Chance encounters with locals, mineral histories, trilobites and flood warnings merge in a layered world where deep time and deep strata reveal new cycles and horrors. Becoming geological is a theme 
-      explored and often returned to in my paintings and sculpture, and this body of work allowed me to simultaneously world-build with local specificity and also speculate with what happens, when warnings in stone can no longer
-      be deciphered.</p> 
-    
+        <p>This series of paintings was produced during a two month residency stay at Cabin over the Autumn of 2026. The paintings locate themselves within a fictionalised narrative developed over the first few weeks of
+        living in Potsdam upstate New York. Chance encounters with locals, mineral histories, trilobites and flood warnings merge in a layered world where deep time and deep strata reveal new cycles and horrors. Becoming geological is a theme
+        explored and often returned to in my paintings and sculpture, and this body of work allowed me to simultaneously world-build with local specificity and also speculate with what happens, when warnings in stone can no longer
+        be deciphered.</p>
+
+        <div class="gallery">
+
+          <figure>
+              <img src="images/1.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/2.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/3.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/4.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/5.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/6.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/7.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/8.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/9.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/10.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/11.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/12.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/13.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/14.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/15.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/16.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/17.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/18.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/19.jpg" alt="Title of the painting">
+              </figure>
+
+            <figure>
+              <img src="images/20.jpg" alt="Title of the painting">
+            </figure>
 
 
+          <!--
+            HOW TO ADD PAINTINGS
+            --------------------
+            1. Put your image files in a folder called "images" next to this page.
+            2. Copy the block below, paste it underneath this comment (but still inside
+               the gallery), and change the file name and the text.
+            3. Add one block per painting. Each image keeps its own proportions,
+               so square, tall and wide paintings can all be mixed.
+            4. The paintings fill the left column from the top down, then continue
+               in the right column.
 
+            <figure>
+              <img src="images/1.jpg" alt="Title of the painting">
+              <figcaption><i>Title of the painting</i><br>Oil on board<br>30 x 30cm<br>2026</figcaption>
+            </figure>
+          -->
 
+        </div>
       </div>
     </div>
   </div>
@@ -66,6 +192,3 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
-
-
-          
