@@ -22,6 +22,28 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/skeleton.css">
 
+  <!-- Image grid (two columns)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* On very small phones, switch to one column */
+    @media (max-width: 450px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -33,40 +55,43 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="three columns" style="margin-top: 5%" >
-        <a href="../../index.html"><h4>Daniella Mooney</h4></a>
+      <div class="three columns" style="margin-top: 5%">
+        <a href="/index.html"><h4>Daniella Mooney</h4></a>
         <ul>
-          <li> <a href="/pages/about/about.html">About</a> <br> 
-          <li> <a href="/pages/exhibitions/exhibitions.html">Exhibitions</a> <br> 
-          <li> <a href="/pages/selected_works/selected_works.html">Selected Works</a> <br> 
-          <li> <a href="/pages/paintings/paintings.html">Paintings</a> <br> 
-          <li> <a href="/pages/texts/texts.html">Texts/Press</a> <br> 
-          <li> <a href="/pages/projects/projects.html">Projects</a> 
-          <li> <a href="/pages/contact/contact.html">Contact</a> <br>
+          <li><a href="/pages/about/about.html">About</a></li>
+          <li><a href="/pages/exhibitions/exhibitions.html">Exhibitions</a></li>
+          <li><a href="/pages/selected_works/selected_works.html">Selected Works</a></li>
+          <li><a href="/pages/paintings/paintings.html">Paintings</a></li>
+          <li><a href="/pages/texts/texts.html">Texts/Press</a></li>
+          <li><a href="/pages/projects/projects.html">Projects</a></li>
+          <li><a href="/pages/contact/contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="nine columns" style="margin-top: 5%" >
+
+      <div class="nine columns" style="margin-top: 5%">
 
         <p><b>Extending limbs, making moves / or, the stones we carry</b></p>
 
         <p>Zentrum für Kunst und Urbanistik residency program August/September, Berlin, 2021 </p>
 
-        <p>"I have been paving the floor of my studio apartment at ZKU for the past 2 months, using found cobblestones from the neighbourhood of Moabit and sometimes beyond. I wash each one before arranging them on the floor, making sure to avoid my bed in the corner of the room. Space has been made for a large stone circle in the centre. Backpacks, bikes, make-shift devices, some more practical than others are used for transportation. I search the pavements, extending limbs, shifting weight, picking up these quiet pixels of geological time. My body is in turn shaped by these slowly accumulating units which embody a temporality that is beyond my capability of understanding, but feel drawn to touch and lift. These stones, somehow pushed out of place, creating unclear and questionable borders are collected and repurposed to build a provisional site. The purpose in and of itself is the process, creating a temporary space that gently cups its hands around my relationship to stone. And lately more and more, the un-precious stone, the hard-working ones. Being careful not to be prescriptive around the use of the space, I can cast some questions into it, reflecting on not just my relationship to these objects, but a more collective one. Stories of blunt disobedient force, stones used as weapons in civil unrest, heavy, on hand, the provenance of and violent conditions surrounding extraction, human slave labour. I also think about the Trümmerfrauen or rubblewomen, who helped construct bombed cities in Germany and Austria after the war. Resisting the urge to anthropomorphise, I understand that these are purely human stories. I wonder though at traces of human touch, polished surfaces, enduring geometries, subtle resonant frequencies, all as types of encoded characters. And what of my place in this chain of human affect. After a blink of their time, I return them back to the streets, casting new autonomous circles, offering new potential alignments and neighbourhood apertures. This is an ongoing work and anecdotal curiosity into imagining how information could be encoded, stored, and retrieved in a material like stone, but more so, my own body. And how this relationship finds expression, through looking, feeling and touching my immediate environment and the histories embedded within it."</p>
+        <p>"I have been paving the floor of my studio apartment at ZK/U for the past 2 months, using found cobblestones from the neighbourhood of Moabit and sometimes beyond. I wash each one before arranging them on the floor, making sure to avoid my bed in the corner of the room. Space has been made for a large stone circle in the centre. Backpacks, bikes, make-shift devices, some more practical than others are used for transportation. I search the pavements, extending limbs, shifting weight, picking up these quiet pixels of geological time. My body is in turn shaped by these slowly accumulating units which embody a temporality that is beyond my capability of understanding, but feel drawn to touch and lift. These stones, somehow pushed out of place, creating unclear and questionable borders are collected and repurposed to build a provisional site. The purpose in and of itself is the process, creating a temporary space that gently cups its hands around my relationship to stone. And lately more and more, the un-precious stone, the hard-working ones. Being careful not to be prescriptive around the use of the space, I can cast some questions into it, reflecting on not just my relationship to these objects, but a more collective one. Stories of blunt disobedient force, paving stones used as weapons in civil unrest, heavy, on hand, the provenance of and violent conditions surrounding extraction, human slave labour. I also think about the Trümmerfrauen or rubblewomen, who helped construct bombed cities in Germany and Austria after the war. Resisting the urge to anthropomorphise, I understand that these are purely human stories. I wonder though at traces of human touch, polished surfaces, enduring geometries, subtle resonant frequencies, all as types of encoded characters. And what of my place in this chain of human affect. After a blink of their time, I return them back to the streets, casting new autonomous circles, offering new potential alignments and neighbourhood apertures. This is an ongoing work and anecdotal curiosity into imagining how information could be encoded, stored, and retrieved in a material like stone, but more so, my own body. And how this relationship finds expression, through looking, feeling and touching my immediate environment and the histories embedded within it."</p>
 
-        <p>This project in many ways has been inspired by the work of artist friends ive met and collaborated with in small serendipitous ways over the past 3 years. 
-        the work of <a href="http://xin-cheng.info/"> <span style="color: blue"> xin cheng </span></a> has been very influencial to me, her <a href="http://makeshifting.net/about/"> <span style="color: blue"> seedbag for resourcefulness </span></a> and techniques in makeshifting are beautiful tools that inspire care and the hacking/fixing/touching  of one's own surroundings.
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/el1.jpg"><p></p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/el2.jpg"><p></p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/el3.jpg"><p></p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/el4.jpg"><p></p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/zk1.jpg"><p></p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/zk2.jpg"><p></p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/zk3.jpg"><p></p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/zk4.jpg"><p></p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/zk5.jpg"><p></p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/zk6.jpg"><p></p>
-        <p><br><img style='height: 100%; width: 100%; object-fit: contain' src="images/zk7.jpg"><p></p>
-  
+        <p>This project in many ways has been inspired by the work of artist friends ive met and collaborated with in small serendipitous ways over the past 3 years.
+        The work of <a href="http://xin-cheng.info/"> <span style="color: blue"> xin cheng </span></a> has been very influencial to me, her <a href="http://makeshifting.net/about/"> <span style="color: blue"> seedbag for resourcefulness </span></a> and techniques in makeshifting are beautiful tools that inspire care and the hacking/fixing/touching  of one's own surroundings.</p>
+
+        <div class="gallery">
+          <img src="images/el1.jpg" alt="Extending limbs, making moves, image 1">
+          <img src="images/el2.jpg" alt="Extending limbs, making moves, image 2">
+          <img src="images/el3.jpg" alt="Extending limbs, making moves, image 3">
+          <img src="images/el4.jpg" alt="Extending limbs, making moves, image 4">
+          <img src="images/zk1.jpg" alt="Extending limbs, making moves, image 5">
+          <img src="images/zk2.jpg" alt="Extending limbs, making moves, image 6">
+          <img src="images/zk3.jpg" alt="Extending limbs, making moves, image 7">
+          <img src="images/zk4.jpg" alt="Extending limbs, making moves, image 8">
+          <img src="images/zk5.jpg" alt="Extending limbs, making moves, image 9">
+          <img src="images/zk6.jpg" alt="Extending limbs, making moves, image 10">
+          <img src="images/zk7.jpg" alt="Extending limbs, making moves, image 11">
+        </div>
 
       </div>
     </div>
@@ -76,6 +101,3 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
-
-
-          
