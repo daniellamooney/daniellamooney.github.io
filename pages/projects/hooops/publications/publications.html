@@ -22,30 +22,35 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/skeleton.css">
 
-  <!-- Two columns that fit images of any proportion
+  <!-- Two columns
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <style>
     .gallery {
-      column-count: 2;
-      column-gap: 24px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 24px;
+      align-items: start;
     }
     .gallery figure {
-      margin: 0 0 32px 0;
-      break-inside: avoid;
+      margin: 0;
     }
     .gallery img {
       width: 100%;
       height: auto;
       display: block;
     }
+    .gallery figure p {
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
     .gallery figcaption {
       font-size: 1.3rem;
-      margin-top: 8px;
+      margin-top: 16px;
     }
     /* On very small phones, switch to one column */
     @media (max-width: 450px) {
       .gallery {
-        column-count: 1;
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -80,32 +85,34 @@
 
       <div class="nine columns" style="margin-top: 5%">
 
-        <p><b>Hooops magazine / Plant Magic / Weeds, 2024</b></p>
-
-        <p>The second issue of Plant Magic brings together a range of artistic perspectives that explore the complex, resilient, and sometimes contradictory existence of spontaneous vegetation, which is referred to as “weeds”. Weeds embody ambivalence and resistance, thriving in the cracks of crumbling worlds and wastelands. They whisper secrets of life that refuses to give up, of beauty that insists on being seen, of healing that happens stubbornly, even in the poorest of soils. Spontaneous flora reminds us that survival goes beyond mere endurance and becomes an art of thriving against the odds. They dare us to look beyond the obvious, to queer the gaze, and unearth worth in what is so often overlooked.</p>
+        <p><b>Hooops publications</b></p>
 
         <div class="gallery">
 
-        <figure>
-              <img src="images/plant3.jpg" alt="weeds">
-              <figcaption><i><a href="https://hooops.de/plant-magic-issue-2-weeds/"> <span style="color: blue"> Plant Magic - Weeds </span></a></i><br>Issue 2<br>Editors: Astarte Posch & Elisa Pieper<br>124 pages with numerous illustrations and photographs<br>Language: English, German, Chinese<br>hooops publications, Berlin, 2024hooops publications, Berlin, 2024</figcaption>
-            </figure>
+          <figure>
+            <img src="images/plant3.jpg" alt="Plant Magic - Weeds">
+            <p>The second issue of Plant Magic brings together a range of artistic perspectives that explore the complex, resilient, and sometimes contradictory existence of spontaneous vegetation, which is referred to as “weeds”. Weeds embody ambivalence and resistance, thriving in the cracks of crumbling worlds and wastelands. They whisper secrets of life that refuses to give up, of beauty that insists on being seen, of healing that happens stubbornly, even in the poorest of soils. Spontaneous flora reminds us that survival goes beyond mere endurance and becomes an art of thriving against the odds. They dare us to look beyond the obvious, to queer the gaze, and unearth worth in what is so often overlooked.</p>
+            <figcaption><i><a href="https://hooops.de/plant-magic-issue-2-weeds/"><span style="color: blue">Plant Magic - Weeds</span></a></i><br>Issue 2<br>Editors: Astarte Posch &amp; Elisa Pieper<br>124 pages with numerous illustrations and photographs<br>Language: English, German, Chinese<br>hooops publications, Berlin, 2024</figcaption>
+          </figure>
 
-
+          <figure>
+              <img src="images/1.jpg" alt="Description of the image"><figcaption><a href="./close_the_hole_pub/close_the_hole_pub.html"><span style="color: blue"><i>Close the hole</i></span></a><figcaption>
+         <br>Limited edition 43pg artist book in collaboration with <a href="https://hooops.de/">Hooops</span></a> collective
+         <br>Edition of 25
+         <br>Hooops Press, Berlin
+         <br>19,5 x 23 cm
+         <br>2026</p></figure>
           <!--
-            HOW TO ADD PAINTINGS
-            --------------------
-            1. Put your image files in a folder called "images" next to this page.
+            HOW TO ADD THE SECOND IMAGE
+            ---------------------------
+            1. Put the image file in the "images" folder next to this page.
             2. Copy the block below, paste it underneath this comment (but still inside
                the gallery), and change the file name and the text.
-            3. Add one block per painting. Each image keeps its own proportions,
-               so square, tall and wide paintings can all be mixed.
-            4. The paintings fill the left column from the top down, then continue
-               in the right column.
+            3. It will appear in the right-hand column, next to the first image.
 
             <figure>
-              <img src="images/1.jpg" alt="Title of the painting">
-              <figcaption><i>Title of the painting</i><br>Oil on board<br>30 x 30cm<br>2026</figcaption>
+              <img src="images/plant4.jpg" alt="Description of the image">
+              <figcaption><i>Caption text</i></figcaption>
             </figure>
           -->
 
