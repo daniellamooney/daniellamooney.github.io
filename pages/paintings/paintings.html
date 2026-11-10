@@ -137,10 +137,52 @@
           <figure><img src="images/2.jpg" alt="I'd rather be in Springstygbeugel, thanks."><figcaption><i>I'd rather be in Springstygbeugel, thanks.</i><br>Oil on board<br>2019</figcaption></figure>
           <figure><img src="images/3.jpg" alt="Thinking about knees II / Jonkershoek"><figcaption><i>Thinking about knees II / Jonkershoek</i><br>Oil on board<br>2019</figcaption></figure>
 
+
         </div>
       </div>
     </div>
   </div>
+
+<div id="lightbox" role="dialog" aria-label="Enlarged image">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    (function () {
+      var images = document.querySelectorAll('.gallery img');
+      var box = document.getElementById('lightbox');
+      var big = document.getElementById('lightbox-img');
+      var current = 0;
+
+      function show(i) {
+        current = (i + images.length) % images.length;
+        big.src = images[current].src;
+        big.alt = images[current].alt;
+        box.classList.add('open');
+      }
+
+      function hide() {
+        box.classList.remove('open');
+      }
+
+      for (var i = 0; i < images.length; i++) {
+        (function (n) {
+          images[n].addEventListener('click', function () { show(n); });
+        })(i);
+      }
+
+      // Click anywhere to close
+      box.addEventListener('click', hide);
+
+      // Keyboard: Esc closes, arrow keys move between images
+      document.addEventListener('keydown', function (e) {
+        if (!box.classList.contains('open')) { return; }
+        if (e.key === 'Escape') { hide(); }
+        if (e.key === 'ArrowRight') { show(current + 1); }
+        if (e.key === 'ArrowLeft') { show(current - 1); }
+      });
+    })();
+  </script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
