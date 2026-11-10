@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/skeleton.css">
 
-  <!-- Image grid (two columns)
+  <!-- Image grid (two columns) and click-to-enlarge
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <style>
     .gallery {
@@ -35,12 +35,38 @@
       width: 100%;
       height: auto;
       display: block;
+      cursor: zoom-in;
     }
     /* On very small phones, switch to one column */
     @media (max-width: 450px) {
       .gallery {
         grid-template-columns: 1fr;
       }
+    }
+
+    /* Enlarged image view */
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.88);
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+    #lightbox.open {
+      display: flex;
+    }
+    #lightbox img {
+      max-width: 92vw;
+      max-height: 92vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
     }
   </style>
 
@@ -79,7 +105,7 @@
         <br><i>Sinclair Brazier</i>
         <br><i>Elisa Pieper</i>
         <br><i>Marta Orlando</i>
-        <br><i>Anna Bierler</i>
+        <br><i>Anna Bierler</i></p>
 
         <div class="gallery">
 
@@ -95,8 +121,7 @@
           <img src="images/10.jpg" alt="Close the hole, artist's book">
           <img src="images/11.jpg" alt="Close the hole, artist's book">
           <img src="images/12.jpg" alt="Close the hole, artist's book">
-          
-       
+
           <!--
             HOW TO ADD MORE IMAGES
             ----------------------
@@ -104,9 +129,9 @@
             2. Copy the line below, paste it underneath this comment (but still inside
                the gallery), and change the file name.
             3. Images fill the two columns in order, left to right, then down.
-               Add one line per image.
+               Add one line per image. Each new image also enlarges when clicked.
 
-            <img src="images/2.jpg" alt="Close the hole, artist's book">
+            <img src="images/14.jpg" alt="Close the hole, artist's book">
           -->
 
         </div>
@@ -114,6 +139,48 @@
       </div>
     </div>
   </div>
+
+  <!-- Enlarged image view (opens when an image is clicked) -->
+  <div id="lightbox" role="dialog" aria-label="Enlarged image">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    (function () {
+      var images = document.querySelectorAll('.gallery img');
+      var box = document.getElementById('lightbox');
+      var big = document.getElementById('lightbox-img');
+      var current = 0;
+
+      function show(i) {
+        current = (i + images.length) % images.length;
+        big.src = images[current].src;
+        big.alt = images[current].alt;
+        box.classList.add('open');
+      }
+
+      function hide() {
+        box.classList.remove('open');
+      }
+
+      for (var i = 0; i < images.length; i++) {
+        (function (n) {
+          images[n].addEventListener('click', function () { show(n); });
+        })(i);
+      }
+
+      // Click anywhere to close
+      box.addEventListener('click', hide);
+
+      // Keyboard: Esc closes, arrow keys move between images
+      document.addEventListener('keydown', function (e) {
+        if (!box.classList.contains('open')) { return; }
+        if (e.key === 'Escape') { hide(); }
+        if (e.key === 'ArrowRight') { show(current + 1); }
+        if (e.key === 'ArrowLeft') { show(current - 1); }
+      });
+    })();
+  </script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
