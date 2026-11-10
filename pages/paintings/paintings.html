@@ -143,46 +143,94 @@
     </div>
   </div>
 
+<!-- Click-to-enlarge images (paste this block just above the "End Document" comment) -->
+<style>
+  .gallery img {
+    cursor: zoom-in;
+  }
+  #lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.88);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  #lightbox.open {
+    display: flex;
+  }
+  #lightbox .lightbox-content {
+    text-align: center;
+    padding: 16px;
+  }
+  #lightbox img {
+    max-width: 92vw;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  #lightbox-caption {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-top: 12px;
+  }
+</style>
+
 <div id="lightbox" role="dialog" aria-label="Enlarged image">
+  <div class="lightbox-content">
     <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption"></div>
   </div>
+</div>
 
-  <script>
-    (function () {
-      var images = document.querySelectorAll('.gallery img');
-      var box = document.getElementById('lightbox');
-      var big = document.getElementById('lightbox-img');
-      var current = 0;
+<script>
+  (function () {
+    var images = document.querySelectorAll('.gallery img');
+    var box = document.getElementById('lightbox');
+    var big = document.getElementById('lightbox-img');
+    var caption = document.getElementById('lightbox-caption');
+    var current = 0;
 
-      function show(i) {
-        current = (i + images.length) % images.length;
-        big.src = images[current].src;
-        big.alt = images[current].alt;
-        box.classList.add('open');
-      }
+    function show(i) {
+      current = (i + images.length) % images.length;
+      var img = images[current];
+      big.src = img.src;
+      big.alt = img.alt;
+      var figure = img.parentNode;
+      var text = figure ? figure.querySelector('figcaption') : null;
+      caption.innerHTML = text ? text.innerHTML : '';
+      box.classList.add('open');
+    }
 
-      function hide() {
-        box.classList.remove('open');
-      }
+    function hide() {
+      box.classList.remove('open');
+    }
 
-      for (var i = 0; i < images.length; i++) {
-        (function (n) {
-          images[n].addEventListener('click', function () { show(n); });
-        })(i);
-      }
+    for (var i = 0; i < images.length; i++) {
+      (function (n) {
+        images[n].addEventListener('click', function () { show(n); });
+      })(i);
+    }
 
-      // Click anywhere to close
-      box.addEventListener('click', hide);
+    // Click anywhere to close
+    box.addEventListener('click', hide);
 
-      // Keyboard: Esc closes, arrow keys move between images
-      document.addEventListener('keydown', function (e) {
-        if (!box.classList.contains('open')) { return; }
-        if (e.key === 'Escape') { hide(); }
-        if (e.key === 'ArrowRight') { show(current + 1); }
-        if (e.key === 'ArrowLeft') { show(current - 1); }
-      });
-    })();
-  </script>
+    // Keyboard: Esc closes, arrow keys move between images
+    document.addEventListener('keydown', function (e) {
+      if (!box.classList.contains('open')) { return; }
+      if (e.key === 'Escape') { hide(); }
+      if (e.key === 'ArrowRight') { show(current + 1); }
+      if (e.key === 'ArrowLeft') { show(current - 1); }
+    });
+  })();
+</script>
+
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
